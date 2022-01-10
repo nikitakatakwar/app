@@ -1,0 +1,10 @@
+  @foreach ($members as $item)
+          <tr>
+            
+            <td>{{$item['id']}}</td>
+            <td>{{$item['name']}}e</td>
+            <td>{{$item['description']}}</td><br>
+            <td>{{$item['file']}}</td><br>
+           
+          </tr>
+          @endforeach

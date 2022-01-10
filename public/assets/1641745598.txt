@@ -1,0 +1,36 @@
+ 
+
+
+...............controller.............
+
+  public function show()
+    { 
+      $data=user::all();
+      return view('home',["users"=>$data]);
+    }
+ ...............controller end.............
+
+.................... view..........
+
+    <button onclick="myFunction()">Try it</button>
+    <div id="myDIV">
+     
+      @foreach($users as $user)
+        <h6>{{$user->id}}</h6>
+        <h6>{{$user->name}}</h6>
+      @endforeach
+ 
+    </div>
+.................... view ends..........
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+  </script>
+ 
